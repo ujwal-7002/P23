@@ -1,17 +1,18 @@
 class Dustbin{
-    constructor(x,y,width,heigth){
-        bin_options={
+    constructor(x,y,width,height){
+        var options={
             isStatic:true,
             friction:0
         }
-        this.body=Bodies.rectangle(x,y,width,height,bin_options);
+        this.body=Bodies.rectangle(x,y,width,height,options);
         this.width=width;
         this.height=height;
         World.add(world,this.body);
     }
     display(){
-        var pos=this.body.postion;
+        var pos =this.body.position;
+        rectMode(CENTER);
         fill("white");
-        rect(x,y,width,height);
-    }
+        rect(pos.x, pos.y, this.width, this.height);
+      }
 };

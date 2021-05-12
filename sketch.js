@@ -11,18 +11,18 @@ function preload()
 }
 
 function setup() {
-	createCanvas(800, 700);
+	createCanvas(1200, 300);
 
 
 	engine = Engine.create();
 	world = engine.world;
 
 	//Create the Bodies Here.
-	ground= new Ground(400,650,800,20);
-	binWall1= new Dustbin(600,500,20,100);
-	binWall2= new Dustbin(700,500,20,100);
-	binBase= new Dustbin(650,650,100,20);
-	paper= new Paper(300,300);
+	ground= new Ground(600,250,1200,20);
+	binWall1= new Dustbin(900,180,20,100);
+	binWall2= new Dustbin(1100,180,20,100);
+	binBase= new Dustbin(1000,230,200,20);
+	paper= new Paper(30,30,10);
 
 
 	Engine.run(engine);
