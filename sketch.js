@@ -4,9 +4,11 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 var ground, binWall1, binWall2, binBase, paper;
+var dustbinImg , bin;
 
 function preload()
 {
+	dustbinImg=loadImage("dustbingreen.png");
 	
 }
 
@@ -23,6 +25,10 @@ function setup() {
 	binWall2= new Dustbin(1100,180,20,100);
 	binBase= new Dustbin(1000,230,200,20);
 	paper= new Paper(30,30,10);
+	bin=createSprite(1000,180,20,20);
+	bin.addImage(dustbinImg);
+	dustbinImg.scale = 0.7
+
 
 
 	Engine.run(engine);
