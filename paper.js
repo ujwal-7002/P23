@@ -8,7 +8,6 @@ class Paper{
         }
         this.body=Matter.Bodies.circle(x,y,1,options);
         this.width=width;
-        this.image=loadImage("imgs/paper.png");
         World.add(world,this.body);
     } 
     display(){
